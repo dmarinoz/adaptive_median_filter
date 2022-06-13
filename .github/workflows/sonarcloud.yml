@@ -17,7 +17,7 @@ jobs:
       SONAR_SCANNER_VERSION: 4.7.0.2747
       SONAR_SERVER_URL: "https://sonarcloud.io"
       BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
-      OpenCV_DIR: "/home/dmarino/Descargas/opencv-4.5.5/build"
+      #OpenCV_DIR: "/home/dmarino/Descargas/opencv-4.5.5/build"
     steps:
       - uses: actions/checkout@v2
         with:
@@ -43,7 +43,7 @@ jobs:
           echo "$HOME/.sonar/build-wrapper-linux-x86" >> $GITHUB_PATH
       - name: Run build-wrapper
         run: |
-          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake .
+          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake . -DOpenCV_DIR=/home/dmarino/Descargas/opencv-4.5.5
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
