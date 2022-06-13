@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.9)
 set(CMAKE_CXX_STANDARD 14)
 project( proyecto_qt )
-set(OpenCV_DIR=/home/dmarino/Descargas/opencv-4.5.5)
+set(OpenCV_DIR=/home/dmarino/Descargas/opencv-4.5.5/build)
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 add_executable( output main.cpp )
