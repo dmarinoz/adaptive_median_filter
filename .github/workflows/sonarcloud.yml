@@ -18,7 +18,6 @@ jobs:
       SONAR_SERVER_URL: "https://sonarcloud.io"
       BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
       #OpenCV_DIR: "/home/dmarino/Descargas/opencv-4.5.5/build"
-      CMAKE_PREFIX_PATH: "/home/dmarino/Descargas/opencv-4.5.5/build"
     steps:
       - uses: actions/checkout@v2
         with:
