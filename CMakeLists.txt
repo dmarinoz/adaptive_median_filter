@@ -5,6 +5,7 @@ find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 add_executable( output main.cpp )
 target_link_libraries( output ${OpenCV_LIBS} )
+set(OpenCV_DIR=/home/dmarino/Descargas/opencv-4.5.5)
 
 find_package(OpenMP)
 if (OPENMP_FOUND)
